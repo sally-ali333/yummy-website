@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="meal website" name="keywords" />
+    <meta content="meal website" name="description" />
+    <meta content="sally ali" name="author" />
+
+    <link rel="shortcut icon" href="image/logo.png" />
+    <title>yummy</title>
+
+    <!--bootstrap css file-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!--fontawsome css file-->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!--main stylesheet file-->
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="bg-black">
+    <!--start loading-->
+    <div
+      id="loading"
+      class="position-fixed w-100 h-100 bg-black justify-content-center align-items-center"
+    >
+      <div class="loader"></div>
+    </div>
+    <!--end loading-->
+
+    <!--start aside-->
+    <aside>
+      <div
+        class="menu d-flex flex-column justify-content-between bg-black text-white py-5 px-2"
+      >
+        <ul>
+          <li data-link="search">Search</li>
+          <li data-link="catagory">Catagories</li>
+          <li data-link="area">Area</li>
+          <li data-link="ingredient">Ingredients</li>
+          <li data-link="contact">contact us</li>
+        </ul>
+        <div class="footer">
+          <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <p>Copyright Â© 2019 All Rights Reserved.</p>
+        </div>
+      </div>
+      <div
+        class="main-nav py-3 bg-white d-flex flex-column justify-content-between align-items-center"
+      >
+        <img src="image/logo.png" alt="logo" class="w-75" />
+        <i class="fa-solid fa-bars fa-2x" id="menuIcon"></i>
+        <i class="fa-solid fa-xmark fa-2x hidden" id="closeIcon"></i>
+        <div class="icons d-flex flex-column">
+          <i class="fa-solid fa-globe mb-2"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </aside>
+    <!--end aside-->
+
+    <!--start home section-->
+    <section id="home">
+      <div class="container py-5">
+        <div
+          class="row g-2 row-cols-1 row-cols-sm-2 row-cols-md-4"
+          id="HomeData"
+        ></div>
+      </div>
+    </section>
+    <!--end home section-->
+
+    <!--start details meal-->
+    <div id="Details" class="hidden">
+      <div class="container py-5">
+        <div class="row g-3 text-white" id="detailsData"></div>
+      </div>
+    </div>
+    <!--end details meal-->
+
+    <!--start search section-->
+    <section id="search" class="hidden">
+      <div class="container w-75 py-5">
+        <form action="">
+          <div class="row mb-5">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <input
+                id="searchName"
+                type="text"
+                class="form-control"
+                placeholder="Search By Name"
+              />
+            </div>
+            <div class="col-md-6">
+              <input
+                id="searchFLetter"
+                maxlength="1"
+                type="text"
+                class="form-control"
+                placeholder="Search By First Letter"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="result">
+          <div
+            class="row g-2 row-cols-1 row-cols-sm-2 row-cols-md-4"
+            id="searchData"
+          ></div>
+        </div>
+      </div>
+    </section>
+    <!--end search section-->
+
+    <!--start catagory section-->
+    <section id="catagory" class="hidden">
+      <div class="container py-5">
+        <div
+          class="row g-2 row-cols-1 row-cols-sm-2 row-cols-md-4"
+          id="catagoryData"
+        ></div>
+      </div>
+    </section>
+    <!--end catagory section-->
+
+    <!--start area section-->
+    <section id="area" class="hidden">
+      <div class="container py-5">
+        <div
+          class="row g-2 row-cols-1 row-cols-sm-2 row-cols-md-4 text-white"
+          id="areaData"
+        ></div>
+      </div>
+    </section>
+    <!--end area section-->
+
+    <!--start ingredient section-->
+    <section id="ingredient" class="hidden">
+      <div class="container py-5">
+        <div
+          class="row g-2 row-cols-1 row-cols-sm-2 row-cols-md-4 text-white"
+          id="ingredientData"
+        ></div>
+      </div>
+    </section>
+    <!--end ingredient section -->
+
+    <!--start contact section-->
+    <section id="contact" class="hidden">
+      <div class="container w-75 py-5 text-center">
+        <form action="">
+          <div class="row">
+            <div class="col-md-6">
+              <input
+                id="nameInput"
+                type="text"
+                class="form-control mb-2"
+                placeholder="Enter Your Name"
+              />
+              <p id="nameAlert" class="text-danger w-100 mb-2 hidden">
+                Special characters and numbers not allowed
+              </p>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="emailInput"
+                type="email"
+                class="form-control mb-2"
+                placeholder="Enter your Email"
+              />
+              <p id="emailAlert" class="text-danger w-100 mb-2 hidden">
+                invalid email .. email should username@site.com
+              </p>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="tel"
+                id="phoneInput"
+                class="form-control mb-2"
+                placeholder="Enter Your phone"
+              />
+              <p id="phoneAlert" class="text-danger w-100 mb-2 hidden">
+                Enter valid Phone Number
+              </p>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="ageInput"
+                type="number"
+                max="100"
+                class="form-control mb-2"
+                placeholder="Enter your Age"
+              />
+              <p id="ageAlert" class="text-danger w-100 mb-2 hidden">
+                Enter valid age from 1 to 100
+              </p>
+            </div>
+            <div class="col-md-6">
+              <input
+                id="passwordInput"
+                type="password"
+                class="form-control mb-2"
+                placeholder="Enter Your password"
+              />
+              <p id="passwordAlert" class="text-danger w-100 mb-2 hidden">
+                Enter valid password *Minimum eight characters, at least one
+                letter and one number:*
+              </p>
+            </div>
+            <div class="col-md-6">
+              <input
+                type="password"
+                id="repasswordInput"
+                class="form-control mb-2"
+                placeholder="Repassword"
+              />
+              <p id="repasswordAlert" class="text-danger w-100 mb-2 hidden">
+                Enter valid repassword
+              </p>
+            </div>
+          </div>
+          <button id="submitBtn" disabled class="btn btn-outline-danger my-2">
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+    <!--end contact section -->
+
+    <!-- js file-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/index.js" type="module"></script>
+  </body>
+</html>

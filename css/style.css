@@ -1,0 +1,105 @@
+:root {
+  --margin-left-section: 100px;
+}
+
+body {
+  overflow: hidden;
+}
+
+/*common class*/
+
+section,
+#Details {
+  margin-left: var(--margin-left-section);
+}
+
+.hidden {
+  display: none;
+}
+
+
+i {
+  cursor: pointer;
+
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+input,
+input::placeholder {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+
+/* start loading */
+#loading {
+  display: flex;
+  z-index: 99999;
+}
+
+/*end loading*/
+
+
+/* start aside */
+aside {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 66666;
+  display: flex;
+}
+
+aside .menu ul {
+  overflow: hidden;
+}
+
+aside .menu ul li {
+  padding: 10px 0;
+  position: relative;
+  top: 250px;
+  cursor: pointer;
+}
+
+aside .menu ul li a {
+  color: white;
+}
+
+aside .main-nav {
+  width: var(--margin-left-section)
+}
+
+/*end aside*/
+
+
+
+
+/*start  section*/
+.layer {
+  width: 100%;
+  height: 100%;
+  background-color: #f9f6f6ca;
+  transition: .5s top;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 5;
+  padding: 15px;
+}
+
+.maincontent:hover .layer {
+  top: 0;
+}
+
+
+/*end  section*/
