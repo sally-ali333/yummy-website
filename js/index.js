@@ -91,9 +91,9 @@ $("li[data-link = 'contact']").click(() => {
     $("#contact input").val('')
 })
 
-$("#contact input").focus(() => {
-    new Contact().Validation()
-})
+// $("#contact input").focus(() => {
+//     new Contact().Validation()
+// })
 
 
 
